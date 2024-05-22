@@ -40,14 +40,10 @@ export class TaskModalComponent implements OnInit {
     this.ref.close();
   }
 
-
-
   taskform = this.builder.group({
     id: this.builder.control(0),
     title: this.builder.control('', Validators.required),
     description: this.builder.control('', Validators.required),
-    // type: this.builder.control('CUSTOMER'),
-    // group: this.builder.control('level1'),
     status: this.builder.control(true)
   })
 

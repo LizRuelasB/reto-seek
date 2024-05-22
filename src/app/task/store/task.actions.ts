@@ -1,4 +1,3 @@
-// src/app/task/state/actions/task.actions.ts
 import { createAction, props } from '@ngrx/store';
 import { Tasks } from '../../core/models/task.model';
 

@@ -1,8 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { TaskListComponent } from './components/task-list/task-list.component';
-// import { TaskEditComponent } from './task-edit/task-edit.component';
-// import { TaskCreateComponent } from './task-create/task-create.component';
 
 const routes: Routes = [
   { path: '', component: TaskListComponent },

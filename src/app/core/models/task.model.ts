@@ -3,7 +3,6 @@ export interface Tasks {
   title: string,
   description: string,
   status: boolean
-  // associategroup: string,
 }
 
 export interface TasksModel{

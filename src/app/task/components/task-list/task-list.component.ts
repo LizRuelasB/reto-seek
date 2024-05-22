@@ -17,10 +17,8 @@ import { TaskModalComponent } from '../task-modal/task-modal.component';
   styleUrl: './task-list.component.scss'
 })
 export class TaskListComponent implements OnInit {
-
   Tasklist!: Tasks[];
   datasource: any;
-  // @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
 
   displayedColums: string[] = ["id", "title", "description", "status", "action"]
@@ -33,7 +31,6 @@ export class TaskListComponent implements OnInit {
       this.Tasklist = item;
       console.log(this.Tasklist)
       this.datasource = new MatTableDataSource<Tasks>(this.Tasklist);
-      // this.datasource.paginator = this.paginator;
       this.datasource.sort = this.sort;
     });
   }

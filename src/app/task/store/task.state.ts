@@ -1,5 +1,3 @@
-// import { AssociateModel } from "../Model/Associate.model";
-
 export const TaskState:any={
     list:[],
     errormessage:'',

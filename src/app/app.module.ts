@@ -18,15 +18,18 @@ import { TaskModalComponent } from './task/components/task-modal/task-modal.comp
 import { EffectsModule } from '@ngrx/effects';
 import { TaskEffects } from './task/store/task.effects';
 import { AppEffects } from './store/common/App.Effects';
+import { LoginComponent } from './auth/login/login.component';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { MockServices } from '../mock/mock';
 
 @NgModule({
   declarations: [
     AppComponent,
+    LoginComponent,
     TaskListComponent,
     TaskModalComponent
   ],
   imports: [
-
     BrowserModule,
     AppRoutingModule,
     MaterialModule,
@@ -38,7 +41,9 @@ import { AppEffects } from './store/common/App.Effects';
     EffectsModule.forRoot([TaskEffects,AppEffects]),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() , connectInZone: true}),
     NgxMaskDirective,NgxMaskPipe,
- 
+    HttpClientInMemoryWebApiModule.forRoot(
+      MockServices, { dataEncapsulation: false, passThruUnknownUrl: true }
+    )
   ],
   providers: [provideNgxMask(), provideAnimationsAsync()],
   bootstrap: [AppComponent]
