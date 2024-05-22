@@ -1,0 +1,29 @@
+<form [formGroup]="taskform" (ngSubmit)="saveModal()">
+  <mat-card>
+      <mat-card-header>
+         <h1>{{title}}</h1>
+      </mat-card-header>
+      <mat-card-content>
+        <mat-form-field *ngIf="isedit">
+          <mat-label>Id</mat-label>
+          <input formControlName="id" matInput>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Titulo</mat-label>
+          <input formControlName="title" matInput>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Descripción</mat-label>
+          <input formControlName="description" matInput>
+        </mat-form-field>
+       
+        <div >
+          <mat-checkbox formControlName="status">Activo</mat-checkbox>
+        </div>
+      </mat-card-content>
+      <mat-card-actions>
+          <button mat-raised-button color="primary" type="submit">Guardar</button>
+          <a (click)="closePopup()" mat-raised-button color="accent" >Cerrar</a>
+      </mat-card-actions>
+  </mat-card>
+  </form>

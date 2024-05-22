@@ -1,0 +1,22 @@
+{
+  "task": [
+    {
+      "id": 1,
+      "title": "Mi primer titulo",
+      "description": "Mi primiera descripción",
+      "status": true
+    },
+    {
+      "id": 2,
+      "title": "Mi segundo titulo",
+      "description": "Mi primiera descripción",
+      "status": false
+    },
+    {
+      "id": 3,
+      "title": "Mi tercer titulo",
+      "description": "Mi primiera descripción",
+      "status": true
+    }
+  ]
+}

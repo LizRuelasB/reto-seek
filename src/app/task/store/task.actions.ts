@@ -1,0 +1,43 @@
+// src/app/task/state/actions/task.actions.ts
+import { createAction, props } from '@ngrx/store';
+import { Tasks } from '../../core/models/task.model';
+
+export const LOAD_TASK='[task page]load task'
+export const LOAD_TASK_SUCCESS='[task page]load task success'
+export const LOAD_TASK_FAIL='[task page]load task fail'
+export const ADD_TASK='[task page]add task'
+export const ADD_TASK_SUCCESS='[task page]add task success'
+export const GET_TASK='[task page]get task'
+export const GET_TASK_SUCCESS='[task page]get task success'
+
+
+export const UPDATE_TASK='[task page]update task'
+export const UPDATE_TASK_SUCCESS='[task page]update task success'
+
+
+export const DELETE_TASK='[task page]delete task'
+export const DELETE_TASK_SUCCESS='[task page]delete task success'
+
+
+export const loadtask=createAction(LOAD_TASK)
+export const loadtasksuccess=createAction(LOAD_TASK_SUCCESS,props<{list:Tasks[]}>())
+export const loadtaskfail=createAction(LOAD_TASK_FAIL,props<{errormessage:string}>())
+
+export const addtask=createAction(ADD_TASK,props<{inputdata:Tasks}>())
+export const addtasksuccess=createAction(ADD_TASK_SUCCESS,props<{inputdata:Tasks}>())
+
+export const updatetask=createAction(UPDATE_TASK,props<{inputdata:Tasks}>())
+export const updatetasksuccess=createAction(UPDATE_TASK_SUCCESS,props<{inputdata:Tasks}>())
+
+
+export const gettask = createAction(GET_TASK, props<{ id: number }>());
+export const gettasksuccess=createAction(GET_TASK_SUCCESS,props<{obj:Tasks}>())
+
+
+export const deletetask=createAction(DELETE_TASK,props<{code:number}>())
+export const deletetasksuccess=createAction(DELETE_TASK_SUCCESS,props<{code:number}>())
+
+
+export const OPEN_POPUP='[task page]open popup'
+export const openpopup=createAction(OPEN_POPUP);
+
