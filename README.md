@@ -13,6 +13,7 @@ Se puede usar username: 'abc', password: '123'.
 ## Develpment DB Tasks - library json-server 
 
 Run `json-server --watch src/data/db.json`. Navigate to `http://localhost:3000/`.
+Necesario para el CRUD de las tareas
 
 ## Code scaffolding
 
